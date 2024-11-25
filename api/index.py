@@ -9,7 +9,7 @@ def gerar_token():
         "Content-Type": "application/json"
     }
     data_token = {
-        "chave": "VGVzdGVTb011bHRhczpoUUNmUmp2Tw=="
+        "chave": "a29NSXdTZkw6WXlnWk1pUWs="
     }
 
     response = requests.post(url_token, headers=headers_token, json=data_token)
@@ -32,7 +32,7 @@ def consultar_placa(placa):
     url_placa = f"https://api.datacast3.com/api/v1.0/CodificacaoFipe/placa/{placa}"
     headers_placa = {
         "Authorization": f"Bearer {token}",
-        "infocar-id-Key": "225"
+        "infocar-id-Key": "235"
     }
 
     response = requests.get(url_placa, headers=headers_placa)
@@ -49,7 +49,7 @@ def consultar_chassi(chassi):
     url_chassi = f"https://api.datacast3.com/api/v1.0/CodificacaoFipe/chassi/{chassi}"
     headers_chassi = {
         "Authorization": f"Bearer {token}",
-        "infocar-id-Key": "225"
+        "infocar-id-Key": "235"
     }
 
     response = requests.get(url_chassi, headers=headers_chassi)
